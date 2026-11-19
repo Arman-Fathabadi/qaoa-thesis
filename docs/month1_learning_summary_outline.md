@@ -161,21 +161,21 @@ Use this outline and pre-populated numerical cheat sheet to write your 1–2 pag
    - **Connection to RQ1:** Introduced the alternating cost-mixer ansatz $U(B,\beta)U(C,\gamma)$; proved that QAOA achieves approximation ratio $\alpha \ge 0.6924$ on 3-regular graphs at $p=1$, and $\lim_{p \to \infty} \alpha = 1$.
    - **Connection to RQ4:** Established the theoretical framework for comparing quantum combinatorial optimization bounds against classical approximation algorithms (e.g., Goemans-Williamson 0.878 bound).
 
-2. **Blekos et al. (2024)** — *A Review on Quantum Approximate Optimization Algorithm and its Variants* (Physics Reports)
-   - **Connection to RQ1 & RQ3:** Comprehensive survey of QAOA parameter landscapes, parameter transferability across graphs, and classical optimization strategies (COBYLA, Nelder-Mead, gradient-based).
-   - **Connection to RQ2 & RQ3:** Analyzes barren plateaus, reachability deficits, and noise degradation in NISQ execution, providing taxonomy for noise-aware algorithmic extensions.
+2. **Blekos et al. (2024)** — *A Review on Quantum Approximate Optimization Algorithm and its Variants* (*Physics Reports*, Vol. 1068, pp. 1–66; `arXiv:2306.09198`)
+   - **Connection to RQ1 & RQ3:** Comprehensive survey of QAOA parameter landscapes, ansatz variants, and classical optimization strategies (COBYLA, Nelder-Mead, gradient-based).
+   - **Connection to RQ2 & RQ3:** Analyzes barren plateaus, reachability deficits, and hardware noise susceptibility and mitigation in NISQ execution.
 
-3. **Sturm et al. (2023)** — *Optimizing QAOA Compilation and Noise-Aware Scheduling*
-   - **Connection to RQ2:** Quantifies how limited physical qubit connectivity forces SWAP routing, dramatically inflating CNOT gate counts and compounding two-qubit depolarizing noise.
-   - **Connection to RQ3:** Demonstrates hardware-aware transpilation, pulse scheduling, and layout selection to minimize noise accumulation in the cost Hamiltonian layer.
+3. **Sturm (2023)** — *Theory and Implementation of the Quantum Approximate Optimization Algorithm: A Comprehensible Introduction and Case Study Using Qiskit and IBM Quantum Computers* (`arXiv:2301.09535`)
+   - **Connection to RQ1 & RQ2:** Connects QAOA mathematical formulation directly to step-by-step Qiskit code and includes case-study hardware experiments on a 27-qubit IBM quantum processor (`ibmq_ehningen`).
+   - **Connection to RQ3:** Highlights practical fidelity and compilation limitations encountered when moving QAOA from ideal simulation to NISQ hardware.
 
-4. **Resch & Karpuzcu (2021)** — *Benchmarking Quantum Approximate Optimization on Hardware*
-   - **Connection to RQ2:** Highlights the "depth dilemma" on physical NISQ hardware: while theoretical $\alpha$ increases with depth $p$, hardware gate infidelities cause empirical performance to peak at small $p$ (e.g., $p=1$ or $p=2$) and degrade thereafter.
-   - **Connection to RQ3 & RQ4:** Outlines methodologies for simulating noise channels (depolarizing, thermal relaxation, readout) in Qiskit Aer to isolate error thresholds against classical baselines.
+4. **Resch (2021)** — *Introductory Tutorial for SPSA and the Quantum Approximation Optimization Algorithm* (`arXiv:2106.01578`)
+   - **Connection to RQ1 & RQ3:** Provides a practical, minimal (~100-line) Python/Qiskit Max-Cut implementation using SPSA (Simultaneous Perturbation Stochastic Approximation) as the classical optimizer.
+   - **Connection to RQ3:** Serves as a clean classical-optimizer reference for comparing noisy optimizer behavior in Phase 3.
 
-5. **Marshall et al. (2020)** — *Characterizing Local Optima & Noise Resilience in QAOA*
-   - **Connection to RQ2 & RQ3:** Demonstrates that noise compresses and flattens the $(\gamma, \beta)$ optimization landscape, creating deceptive local minima and saddle points that stall classical optimizers.
-   - **Connection to RQ1 & RQ3:** Analyzes parameter symmetry and concentration phenomena (such as the periodicity over $[0, \pi]$ observed in our $C_4$ grid search), facilitating bounded parameter initialization.
+5. **Marshall, Wudarski, Hadfield, & Hogg (2020)** — *Characterizing local noise in QAOA circuits* (*IOP SciNotes*, Vol. 1, No. 2, 025208; `arXiv:2002.11682`)
+   - **Connection to RQ2 & RQ3:** Derives approximate closed-form equations for output state fidelity and cost-function degradation in terms of noise rate, number of qubits, and circuit depth $p$.
+   - **Connection to RQ2:** Explains the core NISQ depth–noise trade-off, where deeper circuits improve theoretical expressiveness while accelerating exponential/power-law performance decay under local noise.
 
 6. **IBM Quantum Learning / Qiskit Documentation**
    - **Connection to RQ2 & RQ3:** Provides formal specifications for modeling quantum noise via `qiskit_aer.noise` (`NoiseModel`, `depolarizing_error`, `ReadoutError`) and applying M3 matrix-free readout mitigation.
