@@ -87,7 +87,7 @@ Implemented and verified three classical solvers (`brute_force`, `random_search`
   - Classical self-tests (`src/maxcut.py`): `C4 exact/random/greedy: 4 4 4`; `G(6,0.6) edges=10 exact/random/greedy: 8 8 8` (`all maxcut tests passed`).
   - Depth-1 QAOA `C4` parameter landscape & 2,048-shot histogram (`notebooks/04_qaoa_maxcut_p1.ipynb`).
   - Bell-state depolarizing + readout noise error & 2-qubit sweep (`notebooks/05_bell_noise.ipynb`).
-- **Time Logged:** See [`time_log.md`](https://github.com/Arman-Fathabadi/qaoa-thesis/blob/main/time_log.md) (`12.5` completed hours on Oct 16 + `1.5` planned).
+- **Time Logged:** See [`time_log.md`](https://github.com/Arman-Fathabadi/qaoa-thesis/blob/main/time_log.md) (`12.5` completed hours in October + `1.5` planned; `3.0` completed hours in November — **`15.5` completed hours total**).
 
 ---
 

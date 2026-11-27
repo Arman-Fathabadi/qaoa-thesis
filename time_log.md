@@ -11,3 +11,7 @@
 | 2026-10-16 | 1.5 | Implemented and executed `05_bell_noise.ipynb`: NISQ noise modeling with depolarizing gate noise and readout bit-flip error, demonstrating 8.5% error rate and two-qubit gate error sweep. |
 | 2026-10-16 | 1.0 | Created Month 1 learning summary outline and numerical cheat sheet (`docs/month1_learning_summary_outline.md`) mapping executed results and literature to RQ1–RQ4. |
 | 2026-10-16 | [1.5] | *[Planned / Arman]*: Draft 1–2 page Month 1 progress report prose from outline, review executed notebook outputs, and prepare discussion points for Dr. Isaac Woungang. |
+| 2026-11-19 | 1.0 | Audited Month 1 references against original PDFs/arXiv records and updated verified titles and arXiv IDs in `docs/month1_learning_summary_outline.md` (commit `1992648`). |
+| 2026-11-26 | 2.0 | Reran `src/maxcut.py` baselines, verified Python 3.12.16/Qiskit notebook outputs, compiled the Month 2 weekly log (`docs/weekly_progress_log.md`), and prepared the 3-page supervisor report. |
+
+**Totals:** October completed `12.5` h (+ `[1.5]` h planned) · November completed `3.0` h · **Total completed:** `15.5` h.
