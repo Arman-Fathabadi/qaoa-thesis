@@ -70,6 +70,16 @@ def greedy_local_search(G, restarts=10, seed=None):
     return best_val, best
 
 
+def benchmark_graphs():
+    """Standard small-scale unweighted Max-Cut benchmark graphs (n = 4, 6, 8)."""
+    return {
+        "C4": nx.cycle_graph(4),
+        "G(6,0.6)": nx.gnp_random_graph(6, 0.6, seed=42),
+        "C8": nx.cycle_graph(8),
+        "G(8,0.5)": nx.gnp_random_graph(8, 0.5, seed=7),
+    }
+
+
 if __name__ == "__main__":
     # Test 1: 4-node cycle, optimum is 4 (alternate sides)
     C4 = nx.cycle_graph(4)
@@ -88,4 +98,15 @@ if __name__ == "__main__":
     assert rs == opt  # 64 states, 500 samples: all but certain to hit the optimum
     assert gr >= opt / 2  # local optima are always at least half the edges' worth
     print(f"G(6,0.6) edges={G.number_of_edges()}  exact/random/greedy:", opt, rs, gr)
+
+    # Test 3: 8-node benchmarks (C8 and seeded random graph)
+    for name in ("C8", "G(8,0.5)"):
+        H = benchmark_graphs()[name]
+        opt_h = brute_force(H)[0]
+        rs_h = random_search(H, 1000, seed=1)[0]
+        gr_h = greedy_local_search(H, 10, seed=1)[0]
+        assert rs_h <= opt_h and gr_h <= opt_h
+        assert gr_h >= opt_h / 2
+        print(f"{name} edges={H.number_of_edges()}  exact/random/greedy:", opt_h, rs_h, gr_h)
+
     print("all maxcut tests passed")

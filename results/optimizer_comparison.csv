@@ -1,0 +1,13 @@
+graph,p,mode,optimizer,mean_alpha,std_alpha,mean_evals,mean_runtime_s
+"G(6,0.6)",1,statevector,COBYLA,0.7139,0.0,42.7,0.047
+"G(6,0.6)",1,statevector,SPSA,0.7091,0.063,62.0,0.044
+"G(6,0.6)",1,shots,COBYLA,0.7066,0.009,31.7,0.878
+"G(6,0.6)",1,shots,SPSA,0.7037,0.0592,62.0,1.708
+"G(6,0.6)",1,noisy,COBYLA,0.6662,0.0277,28.3,0.429
+"G(6,0.6)",1,noisy,SPSA,0.6854,0.0458,62.0,0.955
+"G(6,0.6)",2,statevector,COBYLA,0.7432,0.0333,60.0,0.083
+"G(6,0.6)",2,statevector,SPSA,0.7614,0.0332,62.0,0.057
+"G(6,0.6)",2,shots,COBYLA,0.7594,0.0388,45.3,1.305
+"G(6,0.6)",2,shots,SPSA,0.7619,0.0364,62.0,1.759
+"G(6,0.6)",2,noisy,COBYLA,0.6873,0.0465,44.7,0.851
+"G(6,0.6)",2,noisy,SPSA,0.7125,0.0569,62.0,1.161

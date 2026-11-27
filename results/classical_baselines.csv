@@ -1,0 +1,5 @@
+graph,nodes,edges,exact_opt,random_cut,random_samples,greedy_cut,exact_ms,random_ms,greedy_ms
+C4,4,4,4,4,200,4,0.04,0.588,0.09
+"G(6,0.6)",6,10,8,8,500,8,0.098,2.041,0.158
+C8,8,8,8,8,1000,6,0.35,4.476,0.134
+"G(8,0.5)",8,18,14,14,1000,14,0.53,6.009,0.312
